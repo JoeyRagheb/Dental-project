@@ -123,12 +123,11 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
-            result = torch.from_numpy(result).long()
-            image_dis = torchvision.utils.make_grid(result)
-            st.image(image_dis)
+            
+            # st.image(image_dis)
             
             fn = 'a.png'
-            pm4py.save_vis_heuristics_net(result, fn)
+            pm4py.save_vis_heuristics_net(var, fn)
 
             # 2. Save to memory.
             # image2 = io.BytesIO(pm4py.view_heuristics_net(map2))
