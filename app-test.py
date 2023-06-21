@@ -108,7 +108,7 @@ def run():
             st.info(type(result))
             # st.info(result)
             f = result.shape
-            st.image(f)
+            st.info(result)
 
 
 
