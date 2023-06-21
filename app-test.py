@@ -123,6 +123,19 @@ def run():
             st.info(len(result[0]))
             st.info(result[-1][-1][-1][-1][-1])
 
+            
+            trans = transforms.ToPILImage()
+            trans1 = transforms.ToTensor()
+            st.image(trans(trans1(result)))
+                        
+            
+            
+            
+            
+            
+            
+            
+            
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
