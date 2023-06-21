@@ -101,9 +101,9 @@ def run():
             # #     st.warning('**' + cal + '(100 grams)**')
             
             st.info('**TESTING**')
-            # result = result.permute(1, 2, 0).numpy()
-            # st.info(result)
-            # st.image(result)
+            result = result.permute(1, 2, 0).numpy()
+            st.info(result)
+            st.image(result)
             # # result = result.numpy()
             # # result = np.squeeze(result)
             # st.image(result)
