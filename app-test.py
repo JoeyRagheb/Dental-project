@@ -60,7 +60,7 @@ def run():
             st.info(r)
 
             second = result[1].numpy()
-            second = np.moveaxis(second, -1, 0)
+            # second = np.moveaxis(second, -1, 0)
             s = second.shape
             st.info(s)
             st.image(second)
