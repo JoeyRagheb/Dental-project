@@ -59,8 +59,9 @@ def run():
             r = result[1].shape
             st.info(r)
 
-
-            st.image(result[1].permute(1, 2, 0).numpy())
+            second = result[1].numpy()
+            second = np.moveaxis(second, -1, 0)
+            st.image(result[1].numpy())
 
             # st.info(result)
             st.info(len(result))
