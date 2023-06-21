@@ -123,6 +123,7 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
+            result = torch.from_numpy(result).long()
             image_dis = torchvision.utils.make_grid(result)
             st.image(image_dis)
             
