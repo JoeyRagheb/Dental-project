@@ -30,7 +30,7 @@ from torchvision.transforms import Resize
 
 def processed_img(img_path):
     # img = load_img(img_path)
-    img = load_img(img_path, target_size=(224, 224, 3))
+    img = load_img(img_path, target_size=(960, 960, 3))
     img = img_to_array(img)
 
     st.info('***HERE***')
@@ -78,7 +78,10 @@ def processed_img(img_path):
     # results.xywh[0]
 
 
-
+    st.info('***HERE23***')
+    st.info(type(results))
+    f = results.shape
+    st.info(f)
 
     # res ="carrot"
     # # res should be a string
