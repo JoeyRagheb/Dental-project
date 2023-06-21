@@ -102,9 +102,9 @@ def run():
             
             st.info('**TESTING**')
             st.info(type(result))
-            st.info(result)
+            # st.info(result)
 
-            result = torch.tensor(result)
+            result = result.numpy()
             st.info(type(result))
             st.info(result)
 
