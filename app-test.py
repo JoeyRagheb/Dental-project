@@ -103,9 +103,10 @@ def run():
             st.info('**TESTING**')
             st.info(type(result))
             st.info(result)
-            
-            result = [t.numpy() for t in result]
+
+            result = torch.cat(result)
             st.info(type(result))
+            st.info(result)
 
             result = torch.Tensor(result)
             st.info(type(result))
