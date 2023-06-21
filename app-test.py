@@ -118,6 +118,7 @@ def run():
             st.info(len(result[0]))
             st.info(result[-1][-1][-1][-1][-1])
 
+            display.Image(result)
 
 
             with open('tensor_answer.txt', "w") as f:
