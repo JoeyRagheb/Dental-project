@@ -115,6 +115,16 @@ def run():
             st.info(len(result))
             st.info(len(result[0]))
 
+            result = torch.cat([x.float() for x in result], dim=1).half()
+            st.info(type(result))
+            f = result.shape
+            st.info(f)
+
+
+
+
+
+
             result = np.squeeze(result)
             st.info(type(result))
             # st.info(result)
