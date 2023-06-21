@@ -106,18 +106,22 @@ def run():
 
             result = np.squeeze(result)
             st.info(type(result))
-            st.info(result)
-
-
-            result = np.array(result, dtype=np.float32)
-            st.info(type(result))
-            st.info(result)
-
-            result = torch.Tensor(result)
-            st.info(type(result))
-            result = result.permute(1, 2, 0).numpy()
-            st.info(result)
+            # st.info(result)
             st.image(result)
+
+
+
+
+
+            # result = np.array(result, dtype=np.float32)
+            # st.info(type(result))
+            # st.info(result)
+
+            # result = torch.Tensor(result)
+            # st.info(type(result))
+            # result = result.permute(1, 2, 0).numpy()
+            # st.info(result)
+            # st.image(result)
             # # result = result.numpy()
             # # result = np.squeeze(result)
             # st.image(result)
