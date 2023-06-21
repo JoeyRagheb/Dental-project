@@ -127,7 +127,7 @@ def run():
             var = display.Image(result)
             
             
-            var.write_png("file.png")
+            st.info(var)
 
             
             
