@@ -102,7 +102,8 @@ def run():
             
             st.info('**TESTING**')
             st.info(type(result))
-            
+            result = torch.Tensor(result)
+            st.info(type(result))
             result = result.permute(1, 2, 0).numpy()
             st.info(result)
             st.image(result)
