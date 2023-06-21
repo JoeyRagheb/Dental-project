@@ -120,10 +120,14 @@ def run():
             st.info(f)
 
 
+            st.info('**TESTING2**')
             # Torch
             result = result[0]
             f = result.shape
             st.info(f)
+            st.info(type(result))
+            result = torch.Tensor(result)
+            st.info(type(result))
 
             
             st.info('**HERE4**')
