@@ -104,7 +104,7 @@ def run():
             st.info(type(result))
             st.info(result)
 
-            result = torch.stack(result)
+            result = torch.stack((result))
             st.info(type(result))
             st.info(result)
 
