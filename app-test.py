@@ -126,7 +126,7 @@ def run():
             display = utils.notebook_init()
             var = display.Image(result)
             
-            from IPython.display import Image
+            # from IPython.display import Image
             st.info(Image(var))
 
             
