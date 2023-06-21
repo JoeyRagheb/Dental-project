@@ -112,6 +112,8 @@ def run():
             st.info('**TESTING**')
             st.info(type(result))
             # st.info(result)
+            st.info(len(result))
+            st.info(len(result[0]))
 
             result = np.squeeze(result)
             st.info(type(result))
