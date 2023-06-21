@@ -8,6 +8,7 @@ import torch
 from torchvision.transforms import Resize
 import torch as T
 from functools import reduce
+import pm4py
 
 # from keras.models import load_model
 # import requests
@@ -121,6 +122,19 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
+            
+            
+            fn = 'a.png'
+            pm4py.save_vis_heuristics_net(var, fn)
+
+            # 2. Save to memory.
+            # image2 = io.BytesIO(pm4py.view_heuristics_net(map2))
+
+            bpm_discovery = st.container()
+            with bpm_discovery:
+                st.image(fn, caption='Heuristic Minners algorithm')
+            
+            
             st.image(var)
 
 
