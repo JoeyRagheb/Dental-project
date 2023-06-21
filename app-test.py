@@ -127,9 +127,9 @@ def run():
             var = display.Image(result)
             
             
-            with open(save_image_path, "wb") as f:
-                f.write(img_file.getbuffer())
-            st.image(img_file)
+            from torchvision.utils import save_image
+            save_image(var, 'img1.png')
+
             
             
             
