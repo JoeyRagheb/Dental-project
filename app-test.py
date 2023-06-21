@@ -121,6 +121,7 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
+            st.image(var)
 
 
             with open('tensor_answer.txt', "w") as f:
