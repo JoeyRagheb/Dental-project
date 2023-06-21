@@ -10,7 +10,8 @@ import torch as T
 from functools import reduce
 import pm4py
 from torchvision import transforms
-import torchvision 
+import torchvision
+import tensorflow
 
 
 # from keras.models import load_model
