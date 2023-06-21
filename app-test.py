@@ -127,7 +127,7 @@ def run():
             var = display.Image(result)
             
             # from IPython.display import Image
-            st.info(Image(var))
+            st.image(Image(var))
 
             
             
