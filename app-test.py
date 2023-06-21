@@ -125,7 +125,16 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
-            var = transforms.ToPILImage()(result)
+            
+            
+            with open(save_image_path, "wb") as f:
+                f.write(img_file.getbuffer())
+            st.image(img_file)
+            
+            
+            
+            var = transforms.ToPILImage()(var)
+
             grid = torchvision.utils.make_grid(var)
 
             st.image(grid)
