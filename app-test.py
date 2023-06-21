@@ -46,10 +46,11 @@ def processed_img(img_path):
 
     img = tensor_image
     
-    
+
 
     # import torch
 
+    torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
     #Model
     model = torch.hub.load('ultralytics/yolov5', 'custom', path='Best/best.pt', force_reload=True)
     # model = torch.hub.load('ultralytics/yolov5', 'custom', path='model/yolov5s.pt', force_reload=True)
@@ -102,6 +103,7 @@ def run():
             st.info('**TESTING**')
             # result = result.permute(1, 2, 0).numpy()
             # st.info(result)
+            # st.image(result)
             # # result = result.numpy()
             # # result = np.squeeze(result)
             # st.image(result)
