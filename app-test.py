@@ -59,11 +59,12 @@ def run():
             r = result[1].shape
             st.info(r)
 
-            second = result[1].numpy()
-            second = second.reshape(240,240,3)
-            s = second.shape
+            numpy_array = result[1].numpy()
+            numpy_array = numpy_array[0].transpose(1, 2, 0)
+            
+            s = numpy_array.shape
             st.info(s)
-            st.image(second)
+            st.image(numpy_array)
 
             # st.info(result)
             st.info(len(result))
