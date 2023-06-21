@@ -102,7 +102,7 @@ def run():
             
             st.info('**TESTING**')
             st.info(type(result))
-            result = [result.numpy() for result in my_list_of_tensors]
+            result = [t.numpy() for t in result]
             st.info(type(result))
 
             result = torch.Tensor(result)
