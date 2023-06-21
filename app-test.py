@@ -60,7 +60,7 @@ def run():
             st.info(r)
 
 
-            st.image(result[1].numpy())
+            st.image(result[1].permute(1, 2, 0).numpy())
 
             # st.info(result)
             st.info(len(result))
