@@ -51,11 +51,13 @@ def run():
         # if st.button("Predict"):
         if img_file is not None:
             result = processed_img(save_image_path)
-            
-            st.image(result)
 
             st.info('**TESTING**')
             st.info(type(result))
+            f = result[0].shape
+            st.info(f)
+
+
             # st.info(result)
             st.info(len(result))
             st.info(len(result[0]))
