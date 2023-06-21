@@ -59,6 +59,9 @@ def run():
             r = result[1].shape
             st.info(r)
 
+
+            st.image(result[1])
+
             # st.info(result)
             st.info(len(result))
             st.info(len(result[0]))
