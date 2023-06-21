@@ -107,7 +107,7 @@ def run():
             result = np.squeeze(result)
             st.info(type(result))
             # st.info(result)
-            f = result.shape()
+            f = result.shape
             st.image(f)
 
 
