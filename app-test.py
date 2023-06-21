@@ -118,7 +118,9 @@ def run():
             st.info(len(result[0]))
 
             with open('tensor_answer.txt', "wb") as f:
-                f.write(result)
+                f.write( 'list = ' + repr(result) + '\n' )
+                f.close()
+
 
 
 
