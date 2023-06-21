@@ -90,7 +90,7 @@ def run():
         # if st.button("Predict"):
         if img_file is not None:
             result = processed_img(save_image_path)
-            print(result)
+            # print(result)
             # if result in vegetables:
             #     st.info('**Category : Vegetables**')
             # else:
@@ -101,6 +101,8 @@ def run():
             # #     st.warning('**' + cal + '(100 grams)**')
             
             st.info('**TESTING**')
+            st.info(type(result))
+            
             result = result.permute(1, 2, 0).numpy()
             st.info(result)
             st.image(result)
