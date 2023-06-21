@@ -96,14 +96,14 @@ def run():
     st.title("Maha Cavity Finder")
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
     if img_file is not None:
-        st.info('**TESTING00**')
-        st.info(type(img_file))
+        # st.info('**TESTING00**')
+        # st.info(type(img_file))
         img = Image.open(img_file).resize((250, 250))
-        st.info(type(img))
+        # st.info(type(img))
         st.image(img, use_column_width=False)
         # save_image_path = './' + img_file.name
         save_image_path = img_file.name
-        st.info(type(save_image_path))
+        # st.info(type(save_image_path))
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 
@@ -127,21 +127,25 @@ def run():
             st.info(len(result[0]))
             st.info(result[-1][-1][-1][-1][-1])
 
-            
-
-            result = transforms.ToTensor(result)
-            result = transforms.ToPILImage(result)
-
+            result = torch.tensor(result)
+            st.info('**TESTING11**')
             st.info(type(result))
+            f = result.shape
+            st.info(f)
             st.image(result)
             
             
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
+
+
+
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
