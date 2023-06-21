@@ -104,6 +104,11 @@ def run():
             st.info(type(result))
             # st.info(result)
 
+            result = np.squeeze(result)
+            st.info(type(result))
+            st.info(result)
+
+
             result = np.array(result, dtype=np.float32)
             st.info(type(result))
             st.info(result)
