@@ -113,6 +113,13 @@ def run():
             result = result[0]
             f = result.shape
             st.info(f)
+
+
+
+            result = result.numpy()
+            f = result.shape
+            st.info(f)
+            st.info(type(result))
             st.image(result)
 
 
