@@ -18,22 +18,25 @@ import dataloader
 
 def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
-    img = img_to_array(img)
-
-    tensor_image = torch.from_numpy(img)
-    tensor_image = tensor_image.permute(2, 0, 1)
-    tensor_image = tensor_image.unsqueeze(0)
 
 
-    img = tensor_image
+    # img = img_to_array(img)
+
+    # tensor_image = torch.from_numpy(img)
+    # tensor_image = tensor_image.permute(2, 0, 1)
+    # tensor_image = tensor_image.unsqueeze(0)
+
+
+    # img = tensor_image
+
+
+    img = cv2.imread(img)[..., ::-1]
+
+
 
     torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
     #Model
     model = torch.hub.load('ultralytics/yolov5', 'custom', path='Best/best.pt', force_reload=True)
-
-
-    #Images
-    img = DataLoader()
 
     #Inference
     results = model(img)
