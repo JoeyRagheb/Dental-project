@@ -54,9 +54,10 @@ def run():
 
             st.info('**TESTING**')
             st.info(type(result))
-            f = result[0].shape
-            st.info(f)
-
+            c = result[0].shape
+            st.info(c)
+            r = result[0].shape
+            st.info(r)
 
             # st.info(result)
             st.info(len(result))
