@@ -117,6 +117,12 @@ def run():
             st.info(len(result))
             st.info(len(result[0]))
 
+            with open('tensor_answer.txt', "wb") as f:
+                f.write(result)
+
+
+
+
             result = reduce(lambda x,y: T.cat((x,y)), result[:-1])
             st.info(type(result))
             f = result.shape
