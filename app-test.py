@@ -9,7 +9,9 @@ from torchvision.transforms import Resize
 import torch as T
 from functools import reduce
 import pm4py
-import torchvision
+from torchvision import transforms
+import torchvision 
+
 
 # from keras.models import load_model
 # import requests
