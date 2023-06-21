@@ -123,6 +123,7 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
+            var = transforms.ToPILImage()(var)
             grid = torchvision.utils.make_grid(var)
 
             st.image(grid)
