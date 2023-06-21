@@ -78,10 +78,6 @@ def processed_img(img_path):
     # results.xywh[0]
 
 
-    st.info('***HERE23***')
-    st.info(type(results))
-    f = results.shape
-    st.info(f)
 
     # res ="carrot"
     # # res should be a string
@@ -130,12 +126,14 @@ def run():
             st.info(f)
 
             
-
+            st.info('**HERE4**')
             image = image.permute((2, 0, 1))  # convert to (C, H, W) format
             image = image.unsqueeze(0)  # add fake batch dimension
             resize = Resize((960, 960))
             new_image = resize(image)
-
+            st.info(type(result))
+            f = result.shape
+            st.info(f)
 
 
 
