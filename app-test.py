@@ -124,9 +124,10 @@ def run():
             st.info(result[-1][-1][-1][-1][-1])
 
             
-            trans = transforms.ToPILImage()
-            trans1 = transforms.ToTensor()
-            result = trans(trans1(result))
+
+            result = transforms.ToTensor(result)
+            result = transforms.ToPILImage(result)
+
             st.info(type(result))
             st.image(result)
             
