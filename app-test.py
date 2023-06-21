@@ -127,7 +127,7 @@ def run():
             var = display.Image(result)
             
             # from IPython.display import Image
-            st.image(torchvision.utils.make_grid(var))
+            st.image(result)
 
             
             
