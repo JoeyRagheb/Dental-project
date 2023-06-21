@@ -123,27 +123,12 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
-            
-            # st.image(image_dis)
-            
-            fn = 'a.png'
-            pm4py.save_vis_heuristics_net(var, fn)
+            grid = torchvision.utils.make_grid(im)
 
-            # 2. Save to memory.
-            # image2 = io.BytesIO(pm4py.view_heuristics_net(map2))
-
-            bpm_discovery = st.container()
-            with bpm_discovery:
-                st.image(fn, caption='Heuristic Minners algorithm')
+            st.image(grid)
             
             
-            st.image(var)
-
-
-            with open('tensor_answer.txt', "w") as f:
-                f.write( 'list = ' + repr(result) + '\n' )
-                f.close()
-
+            
 
 
 
