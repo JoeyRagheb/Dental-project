@@ -35,7 +35,7 @@ def processed_img(img_path):
 
     st.info('***HERE***')
     st.info(type(img))
-    f = imag.shape
+    f = img.shape
     st.info(f)
 
 
