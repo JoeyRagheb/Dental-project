@@ -127,7 +127,7 @@ def run():
             var = display.Image(result)
             
             # from IPython.display import Image
-            st.image(result)
+            st.image(tensorflow.make_ndarray(tensorflow.make_tensor_proto(result)))
 
             
             
