@@ -115,7 +115,7 @@ def run():
             st.info(len(result))
             st.info(len(result[0]))
 
-            result = torch.cat([x.float() for x in result], dim=1).half()
+            result = torch.cat([result[0], result[1]], dim=2)
             st.info(type(result))
             f = result.shape
             st.info(f)
