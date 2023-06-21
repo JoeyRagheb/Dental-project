@@ -56,7 +56,7 @@ def run():
             st.info(type(result))
             c = result[0].shape
             st.info(c)
-            r = result[0].shape
+            r = result[1].shape
             st.info(r)
 
             # st.info(result)
