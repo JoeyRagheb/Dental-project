@@ -5,7 +5,7 @@ from tensorflow.keras.utils import img_to_array
 from tensorflow import convert_to_tensor
 import numpy as np
 import torch
-
+from torchvision.transforms import Resize
 
 # from keras.models import load_model
 # import requests
@@ -32,6 +32,12 @@ def processed_img(img_path):
     # img = load_img(img_path)
     img = load_img(img_path, target_size=(224, 224, 3))
     img = img_to_array(img)
+
+    st.info('***HERE***')
+    st.info(type(img))
+    f = imag.shape
+    st.info(f)
+
 
     tensor_image = torch.from_numpy(img)
     tensor_image = tensor_image.permute(2, 0, 1)
@@ -110,12 +116,23 @@ def run():
             f = result.shape
             st.info(f)
 
+
+            # Torch
             result = result[0]
             f = result.shape
             st.info(f)
 
+            
+
+            image = image.permute((2, 0, 1))  # convert to (C, H, W) format
+            image = image.unsqueeze(0)  # add fake batch dimension
+            resize = Resize((960, 960))
+            new_image = resize(image)
 
 
+
+
+            #numpy
             result = result.numpy()
             f = result.shape
             st.info(f)
