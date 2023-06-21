@@ -43,6 +43,10 @@ def processed_img(img_path):
     tensor_image = tensor_image.permute(2, 0, 1)
     tensor_image = tensor_image.unsqueeze(0)
 
+    st.info('***HERE2***')
+    st.info(type(tensor_image))
+    f = tensor_image.shape
+    st.info(f)
 
     # img = img_to_array(img)
     # img = np.moveaxis(img, -1, 0)
