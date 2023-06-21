@@ -110,8 +110,10 @@ def run():
             f = result.shape
             st.info(f)
 
-
-
+            result = result[0]
+            f = result.shape
+            st.info(f)
+            st.image(result)
 
 
             # result = np.array(result, dtype=np.float32)
