@@ -104,7 +104,7 @@ def run():
             st.info(type(result))
             # st.info(result)
 
-            result = result.numpy()
+            result = np.array(result, dtype=np.float32)
             st.info(type(result))
             st.info(result)
 
