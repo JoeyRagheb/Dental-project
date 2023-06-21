@@ -123,7 +123,7 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
-            grid = torchvision.utils.make_grid(im)
+            grid = torchvision.utils.make_grid(var)
 
             st.image(grid)
             
