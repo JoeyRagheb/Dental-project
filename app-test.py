@@ -125,7 +125,7 @@ def run():
             
             
             fn = 'a.png'
-            pm4py.save_vis_heuristics_net(var, fn)
+            pm4py.save_vis_heuristics_net(result, fn)
 
             # 2. Save to memory.
             # image2 = io.BytesIO(pm4py.view_heuristics_net(map2))
