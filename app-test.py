@@ -113,6 +113,17 @@ def run():
             st.info(type(result))
             # st.info(result)
 
+            st.info('**TESTING2**')
+            result = result.nupmy()
+            st.info(type(result))
+            # st.info(result)
+            f = result.shape
+            st.info(f)
+            st.info('**TESTING3**')
+
+
+
+
             result = np.squeeze(result)
             st.info(type(result))
             # st.info(result)
