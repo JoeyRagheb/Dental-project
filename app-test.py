@@ -125,8 +125,8 @@ def run():
 
             
 
-            result = transforms.ToTensor(result)
-            result = transforms.ToPILImage(result)
+            result = transforms.ToTensor((result))
+            result = transforms.ToPILImage((result))
 
             st.info(type(result))
             st.image(result)
