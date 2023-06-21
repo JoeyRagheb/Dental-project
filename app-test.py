@@ -19,18 +19,12 @@ import cv2
 def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
 
+    img = img_to_array(img)
+    tensor_image = torch.from_numpy(img)
+    tensor_image = tensor_image.permute(2, 0, 1)
+    tensor_image = tensor_image.unsqueeze(0)
+    img = tensor_image
 
-    # img = img_to_array(img)
-
-    # tensor_image = torch.from_numpy(img)
-    # tensor_image = tensor_image.permute(2, 0, 1)
-    # tensor_image = tensor_image.unsqueeze(0)
-
-
-    # img = tensor_image
-
-
-    
 
 
 
@@ -40,7 +34,7 @@ def processed_img(img_path):
 
     #Inference
     # results = model(img)
-    results = model(img, size=960)
+    results = model(img)
 
     return results
 
@@ -49,9 +43,6 @@ def run():
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
-        img = cv2.imread(img)[..., ::-1]
-
-
         st.image(img, use_column_width=False)
         save_image_path = img_file.name
         with open(save_image_path, "wb") as f:
@@ -60,6 +51,7 @@ def run():
         # if st.button("Predict"):
         if img_file is not None:
             result = processed_img(save_image_path)
+            
             st.image(result)
 
             st.info('**TESTING**')
