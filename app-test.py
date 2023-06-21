@@ -118,6 +118,8 @@ def run():
             st.info(len(result[0]))
             st.info(result[-1][-1][-1][-1][-1])
 
+            import utils
+            display = utils.notebook_init()
             display.Image(result)
 
 
