@@ -30,7 +30,7 @@ def processed_img(img_path):
     # img = tensor_image
 
 
-    img = cv2.imread(img)[..., ::-1]
+    
 
 
 
@@ -49,6 +49,9 @@ def run():
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
+        img = cv2.imread(img)[..., ::-1]
+
+
         st.image(img, use_column_width=False)
         save_image_path = img_file.name
         with open(save_image_path, "wb") as f:
