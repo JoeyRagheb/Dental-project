@@ -99,9 +99,11 @@ def run():
         st.info('**TESTING00**')
         st.info(type(img_file))
         img = Image.open(img_file).resize((250, 250))
+        st.info(type(img))
         st.image(img, use_column_width=False)
         # save_image_path = './' + img_file.name
         save_image_path = img_file.name
+        st.info(type(save_image_path))
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 
