@@ -102,6 +102,9 @@ def run():
             
             st.info('**TESTING**')
             st.info(type(result))
+            result = [result.numpy() for result in my_list_of_tensors]
+            st.info(type(result))
+
             result = torch.Tensor(result)
             st.info(type(result))
             result = result.permute(1, 2, 0).numpy()
