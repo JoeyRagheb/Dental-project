@@ -46,6 +46,7 @@ def processed_img(img_path):
 
     img = tensor_image
     
+    
 
     # import torch
 
