@@ -39,7 +39,8 @@ def processed_img(img_path):
     model = torch.hub.load('ultralytics/yolov5', 'custom', path='Best/best.pt', force_reload=True)
 
     #Inference
-    results = model(img)
+    # results = model(img)
+    results = model(img, size=960)
 
     return results
 
