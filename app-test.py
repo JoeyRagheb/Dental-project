@@ -6,6 +6,8 @@ from tensorflow import convert_to_tensor
 import numpy as np
 import torch
 from torchvision.transforms import Resize
+import torch as T
+from functools import reduce
 
 # from keras.models import load_model
 # import requests
@@ -115,9 +117,9 @@ def run():
             st.info(len(result))
             st.info(len(result[0]))
 
-            stacked_result = torch.stack(result)
-            st.info(type(stacked_result))
-            f = stacked_result.shape
+            result = reduce(lambda x,y: T.cat((x,y)), result[:-1])
+            st.info(type(result))
+            f = result.shape
             st.info(f)
 
 
