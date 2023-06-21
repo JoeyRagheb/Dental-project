@@ -122,7 +122,8 @@ def run():
             import utils
             display = utils.notebook_init()
             var = display.Image(result)
-            
+            image_dis = torchvision.utils.make_grid(result)
+            st.image(image_dis)
             
             fn = 'a.png'
             pm4py.save_vis_heuristics_net(result, fn)
