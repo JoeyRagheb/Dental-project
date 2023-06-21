@@ -127,8 +127,7 @@ def run():
             var = display.Image(result)
             
             
-            from torchvision.utils import save_image
-            save_image(var, 'img1.png')
+            var.write_png("file.png")
 
             
             
