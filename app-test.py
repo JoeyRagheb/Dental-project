@@ -60,7 +60,7 @@ def run():
             st.info(r)
 
             second = result[1].numpy()
-            second = second.reshape(240,240,32)
+            second = second.reshape(240,240,3)
             s = second.shape
             st.info(s)
             st.image(second)
