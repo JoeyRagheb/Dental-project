@@ -25,7 +25,7 @@ def processed_img(img_path):
     os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
     for image_path in glob.glob(f'runs/segment/predict/*.jpg')[:3]:
-      st.image(filename=image_path, height=600)
+        st.image(image_path, height=600)
     # img = img_to_array(img)
     # tensor_image = torch.from_numpy(img)
     # tensor_image = tensor_image.permute(2, 0, 1)
