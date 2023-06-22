@@ -24,11 +24,15 @@ def processed_img(img_path):
     st.info('***Image segmentation in the works***')
     os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
-
+    image_predictions =[]
     st.info('***Hooray! Segmentation Result***')
     for image_path in glob.glob(f'runs/segment/predict/*.jpg'):
-        st.image(image_path)
+        image_predictions += [image_path]
+
+    st.info(image_predictions)
+    st.image(image_predictions[-1])
     
+
     results = 0
     return results
 
