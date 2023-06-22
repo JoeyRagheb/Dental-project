@@ -52,6 +52,19 @@ def run():
         if img_file is not None:
             result = processed_img(save_image_path)
 
+            # Convert tensors in result[0] to NumPy arrays
+            result[0] = [tensor.numpy() for tensor in result[0]]
+
+            # Convert tensors in result[1] to NumPy arrays
+            result[1] = [tensor.numpy() for tensor in result[1]]
+
+            # Convert the entire result list to NumPy array
+            result = np.array(result)
+            st.info(type(result))
+
+
+
+
             st.info('**TESTING**')
             st.info(type(result))
             c = result[0].shape
