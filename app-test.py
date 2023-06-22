@@ -30,6 +30,7 @@ def processed_img(img_path):
         st.image(image_path, height=600)
 
 
+
     # img = img_to_array(img)
     # tensor_image = torch.from_numpy(img)
     # tensor_image = tensor_image.permute(2, 0, 1)
