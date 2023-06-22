@@ -17,6 +17,7 @@ import os
 from ultralytics import YOLO
 import glob
 import re
+import subprocess
 
 
 def processed_img(img_path):
@@ -24,7 +25,24 @@ def processed_img(img_path):
 
     st.info('***Image segmentation in the works***')
     # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
+    
+    # Define the YOLO command
+    yolo_command = "yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true"
 
+    # Execute the YOLO command and capture the output
+    output = subprocess.check_output(yolo_command, shell=True)
+    st.info(output)
+
+    # Process the output as needed
+    # Here you can save the output to a variable or perform any further actions
+
+    # # For example, if the output is an image file path
+    # image_path = output.decode().strip()  # Convert the output bytes to a string and remove leading/trailing whitespace
+
+    # # Now you can use the image path or further process the image as needed
+    # print(image_path)
+        
+    
     folders = os.listdir('runs/segment/')
     folders = [re.findall(r'\d+', s) for s in folders]
     folders = [int(num) for sublist in folders for num in sublist]
