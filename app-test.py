@@ -63,6 +63,9 @@ def run():
             st.info(type(result))
             f = result.shape
             st.info(f)
+            result = result.reshape(3,1)
+            f = result.shape
+            st.info(f)
             st.image(result)
 
 
