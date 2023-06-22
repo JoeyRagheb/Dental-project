@@ -18,7 +18,7 @@ from ultralytics import YOLO
 import glob
 import re
 import subprocess
-
+st.cache_data.clear()
 
 def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
