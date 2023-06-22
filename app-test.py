@@ -24,33 +24,12 @@ def processed_img(img_path):
     st.info('***Image segmentation in the works***')
     os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
-    # st.image('runs/segment/predict/*.jpg')
+
     st.info('***Hooray! Segmentation Result***')
     for image_path in glob.glob(f'runs/segment/predict/*.jpg')[:3]:
         st.image(image_path)
-
-    # st.info(img)
-
-    # img = img_to_array(img)
-    # tensor_image = torch.from_numpy(img)
-    # tensor_image = tensor_image.permute(2, 0, 1)
-    # tensor_image = tensor_image.unsqueeze(0)
-    # img = tensor_image
-    # st.info("***THISSS***")
-    # st.info(type(img))
-    # f = img.shape
-    # st.info(f)
-
-
-
-    # torch.hub._validate_not_a_forked_repo=lambda a,b,c: True
-    # #Model
-    # model = torch.hub.load('ultralytics/yolov5', 'custom', path='Best/best.pt', force_reload=True)
-
-    #Inference
-    # results = model(img)
-    # results = model(img)
-
+    
+    results = 0
     return results
 
 def run():
