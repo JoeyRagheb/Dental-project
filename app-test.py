@@ -23,7 +23,7 @@ def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
 
     st.info('***Image segmentation in the works***')
-    os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
+    # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
     folders = os.listdir('runs/segment/')
     folders = [re.findall(r'\d+', s) for s in folders]
@@ -37,7 +37,7 @@ def processed_img(img_path):
     st.info('***Hooray! Segmentation Result***')
     
     for image_path in glob.glob(image_pred):
-        image_predictions += [image_path]
+        image_predictions += [[image_path]]
 
     st.info(image_predictions)
     st.image(image_predictions[-1])
