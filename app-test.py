@@ -68,10 +68,10 @@ def processed_img(img_path):
     for image_path in glob.glob(image_pred):
         image_predictions += [image_path]
 
-    pic_t = os.listdir('runs/segment/predict8/')
-    st.info(pic_t)
-    st.info(image_predictions)
-    st.image(image_predictions[-1])
+    # pic_t = os.listdir('runs/segment/predict8/')
+    # st.info(pic_t)
+    # st.info(image_predictions)
+    # st.image(image_predictions[-1])
     
 
 
