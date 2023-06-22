@@ -26,7 +26,7 @@ def processed_img(img_path):
 
 
     st.info('***Hooray! Segmentation Result***')
-    for image_path in glob.glob(f'runs/segment/predict/*.jpg')[:-1]:
+    for image_path in glob.glob(f'runs/segment/predict/*.jpg'):
         st.image(image_path)
     
     results = 0
