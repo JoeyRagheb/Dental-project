@@ -25,6 +25,7 @@ def processed_img(img_path):
     # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
     folders = os.listdir('runs/segment/')
+    folders.sort()
     st.info(folders)
     folder_number = folders[-1][-1]
     image_pred = 'runs/segment/predict' + str(folder_number) + '/*.jpg'
