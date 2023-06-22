@@ -26,7 +26,7 @@ def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
 
     st.info('***Image segmentation in the works***')
-    # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
+    os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
     
     # # Define the YOLO command
     # yolo_command = "yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true"
@@ -47,9 +47,9 @@ def processed_img(img_path):
     # # print(image_path)
     
 
-    folder_path = 'runs/segment/'
-    os.system(f"rm -r {folder_path}")
-    st.info(f"Folder {folder_path} deleted successfully.")
+    # folder_path = 'runs/segment/'
+    # os.system(f"rm -r {folder_path}")
+    # st.info(f"Folder {folder_path} deleted successfully.")
 
 
     
