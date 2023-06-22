@@ -27,9 +27,9 @@ def processed_img(img_path):
     st.image('runs/segment/predict/*.jpg')
     
     for image_path in glob.glob(f'runs/segment/predict/*.jpg')[:3]:
-        st.image(image_path, height=600)
+        img = image_path
 
-
+    st.info(img)
 
     # img = img_to_array(img)
     # tensor_image = torch.from_numpy(img)
