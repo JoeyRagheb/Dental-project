@@ -49,9 +49,7 @@ def processed_img(img_path):
     # # print(image_path)
     
 
-    # folder_path = 'runs/segment/'
-    # os.system(f"rm -r {folder_path}")
-    # st.info(f"Folder {folder_path} deleted successfully.")
+
 
 
 
@@ -64,11 +62,14 @@ def processed_img(img_path):
     folder_number = folders[-1]
     image_pred = 'runs/segment/predict' + str(folder_number) + '/*.jpg'
     st.info(image_pred)
+    
     image_predictions =[]
     st.info('***Hooray! Segmentation Result***')
     
     for image_path in glob.glob(image_pred):
         image_predictions += [image_path]
+
+    st.image(image_predictions[-1])
 
     # pic_t = os.listdir('runs/segment/predict8/')
     # st.info(pic_t)
@@ -96,9 +97,11 @@ def processed_img(img_path):
 
 
 
+    
 
-
-
+    folder_path = 'runs/segment/'
+    os.system(f"rm -r {folder_path}")
+    st.info(f"Folder {folder_path} deleted successfully.")
 
 
     results = 0
