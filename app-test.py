@@ -25,7 +25,7 @@ def processed_img(img_path):
     # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
     folders = os.listdir('runs/segment/')
-    st.info(folders)
+    st.info(folders[-1][-1])
     image_predictions =[]
     
     st.info('***Hooray! Segmentation Result***')
