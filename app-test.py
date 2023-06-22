@@ -52,6 +52,7 @@ def processed_img(img_path):
     # st.info(f"Folder {folder_path} deleted successfully.")
 
 
+
     
     folders = os.listdir('runs/segment/')
     folders = [re.findall(r'\d+', s) for s in folders]
