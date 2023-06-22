@@ -25,11 +25,12 @@ def processed_img(img_path):
     # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
 
     folders = os.listdir('runs/segment/')
-    st.info(folders[-1][-1])
+    folder_number = folders[-1][-1]
+    image_pred = 'runs/segment/predict' + str(folder_number) + '/*.jpg'
+    st.info(image_pred)
     image_predictions =[]
-    
     st.info('***Hooray! Segmentation Result***')
-    for image_path in glob.glob('runs/segment/predict/*.jpg'):
+    for image_path in glob.glob(image_pred):
         image_predictions += [image_path]
 
     st.info(image_predictions)
