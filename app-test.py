@@ -61,6 +61,9 @@ def run():
             # Convert the entire result list to NumPy array
             result = np.array(result)
             st.info(type(result))
+            f = result.shape
+            st.info(f)
+            st.image(result)
 
 
 
