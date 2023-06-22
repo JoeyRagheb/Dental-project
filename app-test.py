@@ -1,24 +1,26 @@
 import streamlit as st
 from PIL import Image
 from tensorflow.keras.utils import load_img
-from tensorflow.keras.utils import img_to_array
-from tensorflow import convert_to_tensor
+# from tensorflow.keras.utils import img_to_array
+# from tensorflow import convert_to_tensor
 import numpy as np
 import torch
-from torchvision.transforms import Resize
-import torch as T
-from functools import reduce
-import pm4py
-from torchvision import transforms
-import torchvision
-import tensorflow
-import cv2
+# from torchvision.transforms import Resize
+# import torch as T
+# from functools import reduce
+# import pm4py
+# from torchvision import transforms
+# import torchvision
+# import tensorflow
+# import cv2
 import os
 from ultralytics import YOLO
 import glob
 import re
 import subprocess
 st.cache_data.clear()
+
+
 
 def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
@@ -43,7 +45,13 @@ def processed_img(img_path):
 
     # # # Now you can use the image path or further process the image as needed
     # # print(image_path)
-        
+    
+
+    folder_path = 'runs/segment/'
+    os.system(f"rm -r {folder_path}")
+    st.info(f"Folder {folder_path} deleted successfully.")
+
+
     
     folders = os.listdir('runs/segment/')
     folders = [re.findall(r'\d+', s) for s in folders]
