@@ -26,7 +26,7 @@ def processed_img(img_path):
     img = load_img(img_path, target_size=(960, 960, 3))
 
     st.info('***Image segmentation in the works***')
-    # os.system('yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true')
+    os.system(f'yolo task=segment mode=predict model=weights/best.pt conf=0.25 source={source_folder} save=true')
     
     # # Define the YOLO command
     # yolo_command = "yolo task=segment mode=predict model=weights/best.pt conf=0.25 source=test-image/ save=true"
@@ -91,8 +91,6 @@ def processed_img(img_path):
     for file_path in file_paths:
         all_files+=[file_path]
     st.info(all_files)
-
-
 
 
 
