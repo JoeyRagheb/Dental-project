@@ -45,6 +45,33 @@ def processed_img(img_path):
     st.image(image_predictions[-1])
     
 
+
+    # Specify the path to the folder
+    folder_path = folders
+
+    # List to store file paths
+    file_paths = []
+
+    # Iterate through all files and subdirectories
+    for root, directories, files in os.walk(folder_path):
+        for file in files:
+            file_paths.append(os.path.join(root, file))
+
+    all_files = []
+    # Print the result
+    for file_path in file_paths:
+        all_files+=[file_path]
+    st.info(all_files)
+
+
+
+
+
+
+
+
+
+
     results = 0
     return results
 
