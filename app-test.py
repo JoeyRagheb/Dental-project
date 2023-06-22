@@ -40,6 +40,7 @@ def processed_img(img_path):
         image_predictions += [image_path]
 
     pic_t = os.listdir('runs/segment/predict8/')
+    st.info(pic_t)
     st.info(image_predictions)
     st.image(image_predictions[-1])
     
