@@ -47,7 +47,7 @@ def processed_img(img_path):
 
 
     # Specify the path to the folder
-    folder_path = folders
+    folder_path = 'runs/segment/'
 
     # List to store file paths
     file_paths = []
