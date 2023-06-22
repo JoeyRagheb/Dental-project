@@ -24,7 +24,9 @@ def processed_img(img_path):
     tensor_image = tensor_image.permute(2, 0, 1)
     tensor_image = tensor_image.unsqueeze(0)
     img = tensor_image
-
+    st.info("***THISSS***")
+    f = result.shape
+    st.info(f)
 
 
 
