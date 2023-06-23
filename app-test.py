@@ -59,7 +59,7 @@ def processed_img(img_path):
     folders = [int(num) for sublist in folders for num in sublist]
     folders.sort()
     st.info(folders)
-    if folders != '':
+    if folders != []:
         folder_number = folders[-1]
     else:
         folder_number=''
