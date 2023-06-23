@@ -58,13 +58,13 @@ def processed_img(img_path):
     folders = [re.findall(r'\d+', s) for s in folders]
     folders = [int(num) for sublist in folders for num in sublist]
     folders.sort()
-    st.info(folders)
+    # st.info(folders)
     if folders != []:
         folder_number = folders[-1]
     else:
         folder_number=''
     image_pred = 'runs/segment/predict' + str(folder_number) + '/*.jpg'
-    st.info(image_pred)
+    # st.info(image_pred)
     
     image_predictions =[]
     st.info('***Hooray! Segmentation Result***')
@@ -72,7 +72,7 @@ def processed_img(img_path):
     for image_path in glob.glob(image_pred):
         image_predictions += [image_path]
 
-    st.image(image_predictions[-1])
+    st.image(image_predictions[-1], width=400)
 
     # pic_t = os.listdir('runs/segment/predict8/')
     # st.info(pic_t)
@@ -81,22 +81,22 @@ def processed_img(img_path):
     
 
 
-    # Specify the path to the folder
-    folder_path = 'runs/segment/'
+    # # Specify the path to the folder
+    # folder_path = 'runs/segment/'
 
-    # List to store file paths
-    file_paths = []
+    # # List to store file paths
+    # file_paths = []
 
-    # Iterate through all files and subdirectories
-    for root, directories, files in os.walk(folder_path):
-        for file in files:
-            file_paths.append(os.path.join(root, file))
+    # # Iterate through all files and subdirectories
+    # for root, directories, files in os.walk(folder_path):
+    #     for file in files:
+    #         file_paths.append(os.path.join(root, file))
 
-    all_files = []
-    # Print the result
-    for file_path in file_paths:
-        all_files+=[file_path]
-    st.info(all_files)
+    # all_files = []
+    # # Print the result
+    # for file_path in file_paths:
+    #     all_files+=[file_path]
+    # st.info(all_files)
 
 
 
