@@ -59,7 +59,10 @@ def processed_img(img_path):
     folders = [int(num) for sublist in folders for num in sublist]
     folders.sort()
     st.info(folders)
-    folder_number = folders[-1]
+    if folders != '':
+        folder_number = folders[-1]
+    else:
+        folder_number=''
     image_pred = 'runs/segment/predict' + str(folder_number) + '/*.jpg'
     st.info(image_pred)
     
