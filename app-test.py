@@ -24,7 +24,7 @@ st.cache_data.clear()
 
 def processed_img(img_path):
     # img = load_img(img_path, target_size=(960, 960, 3))
-    img = Image.open(img_path, target_size=(960, 960, 3))
+    img = Image.open(img_path).resize((960, 960))
 
     st.info('***Image segmentation in the works***')
     # source_folder = os.path.dirname(img_path) + '/'
