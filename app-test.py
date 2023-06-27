@@ -26,10 +26,6 @@ def processed_img(img_path):
     # img = load_img(img_path, target_size=(960, 960, 3))
     img = Image.open(img_path, target_size=(960, 960, 3))
 
-
-
-
-
     st.info('***Image segmentation in the works***')
     # source_folder = os.path.dirname(img_path) + '/'
     source_folder = img_path
@@ -54,38 +50,11 @@ def processed_img(img_path):
         image_predictions += [image_path]
 
     st.image(image_predictions[-1], width=400)
-
-    # pic_t = os.listdir('runs/segment/predict8/')
-    # st.info(pic_t)
-    # st.info(image_predictions)
-    # st.image(image_predictions[-1])
-    
-
-
-    # # Specify the path to the folder
-    # folder_path = 'runs/segment/'
-
-    # # List to store file paths
-    # file_paths = []
-
-    # # Iterate through all files and subdirectories
-    # for root, directories, files in os.walk(folder_path):
-    #     for file in files:
-    #         file_paths.append(os.path.join(root, file))
-
-    # all_files = []
-    # # Print the result
-    # for file_path in file_paths:
-    #     all_files+=[file_path]
-    # st.info(all_files)
-
-
-
     
 
     folder_path = 'runs/segment/'
     os.system(f"rm -r {folder_path}")
-    st.info(f"Folder {folder_path} deleted successfully.")
+    # st.info(f"Folder {folder_path} deleted successfully.")
 
 
     results = 0

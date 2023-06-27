@@ -3,26 +3,26 @@ streamlit
 numpy
 Pillow
 flask
-keras
-tensorflow
-torchvision
-opencv-python
-psutil
-PyYAML
-tqdm
-pyzmq
-ipykernel
+# keras
+# tensorflow
+# torchvision
+# opencv-python
+# psutil
+# PyYAML
+# tqdm
+# pyzmq
+# ipykernel
 ultralytics
-ipywidgets
-scipy
-thop
-torch
+# ipywidgets
+# scipy
+# thop
+# torch
 pandas
-seaborn
-setuptools
-gitpython
-matplotlib
-pm4py
+# seaborn
+# setuptools
+# gitpython
+# matplotlib
+# pm4py
 
 
 # requests
