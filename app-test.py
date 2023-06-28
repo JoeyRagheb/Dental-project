@@ -1,18 +1,8 @@
 import streamlit as st
 from PIL import Image
 from tensorflow.keras.utils import load_img
-# from tensorflow.keras.utils import img_to_array
-# from tensorflow import convert_to_tensor
 import numpy as np
 import torch
-# from torchvision.transforms import Resize
-# import torch as T
-# from functools import reduce
-# import pm4py
-# from torchvision import transforms
-# import torchvision
-# import tensorflow
-# import cv2
 import os
 from ultralytics import YOLO
 import glob
@@ -76,7 +66,4 @@ def run():
 
             # st.image(result)
 
-            
-
 run()
-
