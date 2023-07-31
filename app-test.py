@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from tensorflow.keras.utils import load_img
+# from tensorflow.keras.utils import load_img
 import numpy as np
 import torch
 import os
