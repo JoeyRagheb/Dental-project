@@ -19,8 +19,13 @@ def processed_img(img_path):
     st.info('***Image segmentation in the works***')
     # source_folder = os.path.dirname(img_path) + '/'
     source_folder = img_path
+    
+    os.makedirs('runs/segment/', exist_ok=True)
+    
+    
     os.system(f'yolo task=segment mode=predict model=weights/best.pt conf=0.25 source={source_folder} save=true')
-   
+    
+
     folders = os.listdir('runs/segment/')
     folders = [re.findall(r'\d+', s) for s in folders]
     folders = [int(num) for sublist in folders for num in sublist]
