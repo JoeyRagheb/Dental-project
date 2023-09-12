@@ -5,3 +5,4 @@ Pillow
 flask
 ultralytics
 pandas
+streamlit-authenticator

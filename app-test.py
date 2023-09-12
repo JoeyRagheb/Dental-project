@@ -8,6 +8,8 @@ from ultralytics import YOLO
 import glob
 import re
 import subprocess
+import streamlit_authenticator as stauth
+
 st.cache_data.clear()
 
 
@@ -39,7 +41,7 @@ def processed_img(img_path):
     # st.info(image_pred)
     
     image_predictions =[]
-    st.info('***Hooray! Segmentation Result***')
+    st.info('***Success! Segmentation Result***')
     
     for image_path in glob.glob(image_pred):
         image_predictions += [image_path]
