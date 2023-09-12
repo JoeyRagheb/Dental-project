@@ -57,7 +57,7 @@ def processed_img(img_path):
     return results
 
 def run():
-    st.title("Maha Cavity Finder")
+    st.title("Cavity Finder")
     img_file = st.file_uploader("Choose an Image", type=["jpg", "png"])
     if img_file is not None:
         img = Image.open(img_file).resize((250, 250))
