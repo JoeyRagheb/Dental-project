@@ -8,7 +8,7 @@ from ultralytics import YOLO
 import glob
 import re
 import subprocess
-# import streamlit_authenticator as stauth
+
 
 st.cache_data.clear()
 
